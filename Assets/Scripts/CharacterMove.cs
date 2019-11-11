@@ -8,7 +8,7 @@ public class CharacterMove : MonoBehaviour
     //중력값
     const float GravityPower = 9.8f;
     //목적지에 도착했다고 보는 정지 거리
-    const float StoppingDistance = 5.6f;
+    const float StoppingDistance = 1.0f;
 
     //현재 이동 속도
     Vector3 velocity = Vector3.zero;
