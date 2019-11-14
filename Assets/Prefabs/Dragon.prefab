@@ -609,6 +609,7 @@ GameObject:
   - component: {fileID: 143936318772610358}
   - component: {fileID: 114463316053111246}
   - component: {fileID: 114608836441985412}
+  - component: {fileID: 114672623857033380}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -1445,7 +1446,7 @@ Animator:
   m_GameObject: {fileID: 1750280360663902}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: bd05350dfa41bae44b0807ba6c83bbcc, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: a6d53eef90955b2488bcdb2c88d007ed, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1487,6 +1488,17 @@ MonoBehaviour:
   characterName: Dragon
   attacking: 0
   died: 0
+--- !u!114 &114672623857033380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750280360663902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc326d8fb79541144be5c528406e9e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137782279433081302
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
