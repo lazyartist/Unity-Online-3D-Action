@@ -16,16 +16,17 @@ public class CharaAnimation : MonoBehaviour {
 
     void StartAttackHit()
     {
-        Debug.Log("StartAttackHit");
+        Debug.Log("StartAttackHit in CharaAnimation");
     }
 
     void EndAttackHit()
     {
-        Debug.Log("EndAttackHit");
+        Debug.Log("EndAttackHit in CharaAnimation");
     }
 
     void EndAttack()
     {
+        Debug.Log("EndAttack in CharaAnimation");
         attacked = true;
     }
 

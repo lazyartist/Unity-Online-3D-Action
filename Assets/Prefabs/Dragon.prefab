@@ -49,7 +49,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4082029188991208}
-  m_Layer: 0
+  - component: {fileID: 135842402916289346}
+  - component: {fileID: 54271763758359484}
+  - component: {fileID: 114758420987090278}
+  m_Layer: 11
   m_Name: HAND_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +113,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4894486031052148}
   - component: {fileID: 137782279433081302}
-  m_Layer: 0
+  - component: {fileID: 65852636120881232}
+  - component: {fileID: 114450281856921360}
+  m_Layer: 9
   m_Name: LOWDRG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,6 +615,8 @@ GameObject:
   - component: {fileID: 114463316053111246}
   - component: {fileID: 114608836441985412}
   - component: {fileID: 114672623857033380}
+  - component: {fileID: 114813047845323678}
+  - component: {fileID: 114131430211935884}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -980,7 +987,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1750280360663902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -33.84, y: -0.04, z: -29.988571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4699382941198884}
@@ -1437,6 +1444,33 @@ Transform:
   m_Father: {fileID: 4693325510855038}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54271763758359484
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062721718169290}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65852636120881232
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1129918995556940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 3.6, z: 4.3}
+  m_Center: {x: 0, y: 1.3187506, z: -0.947967}
 --- !u!95 &95876786334469670
 Animator:
   serializedVersion: 3
@@ -1455,6 +1489,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114131430211935884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750280360663902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40258fb2c99f9ad44b2b056fd225fb74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114450281856921360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1129918995556940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7306cb582721f4da8b0baef7fb3931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114463316053111246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1499,6 +1555,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc326d8fb79541144be5c528406e9e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114758420987090278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062721718169290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb04eda03d38574188eea535df2baa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114813047845323678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750280360663902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd0397ef48eab245999843bb979297c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &135842402916289346
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062721718169290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137782279433081302
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

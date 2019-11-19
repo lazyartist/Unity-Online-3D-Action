@@ -49,7 +49,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4137914829686958}
-  m_Layer: 0
+  - component: {fileID: 65876284074834394}
+  - component: {fileID: 54529305007468992}
+  - component: {fileID: 114633769364292958}
+  m_Layer: 9
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,6 +162,8 @@ GameObject:
   - component: {fileID: 114722254716909808}
   - component: {fileID: 114079786158288274}
   - component: {fileID: 114241560029728806}
+  - component: {fileID: 114787651839279696}
+  - component: {fileID: 114087463502741198}
   m_Layer: 0
   m_Name: Warg
   m_TagString: Untagged
@@ -414,7 +419,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4059543309663866}
-  m_Layer: 0
+  - component: {fileID: 54636087709605652}
+  - component: {fileID: 135123612172012662}
+  - component: {fileID: 114091447927822222}
+  m_Layer: 11
   m_Name: HEAD1_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +648,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1225679991612958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -29.4, y: 0, z: -30.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4854949512311960}
@@ -1178,6 +1186,48 @@ Transform:
   m_Father: {fileID: 4779983634770046}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54529305007468992
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089599083541804}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54636087709605652
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639080026676076}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65876284074834394
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089599083541804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 1.3, z: 2}
+  m_Center: {x: 0, y: 0.6, z: 0.3}
 --- !u!95 &95946879546864934
 Animator:
   serializedVersion: 3
@@ -1214,6 +1264,28 @@ MonoBehaviour:
   characterName: Warg
   attacking: 0
   died: 0
+--- !u!114 &114087463502741198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1225679991612958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd0397ef48eab245999843bb979297c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114091447927822222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639080026676076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb04eda03d38574188eea535df2baa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114241560029728806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1223,6 +1295,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc326d8fb79541144be5c528406e9e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114633769364292958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089599083541804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7306cb582721f4da8b0baef7fb3931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114722254716909808
@@ -1240,6 +1323,29 @@ MonoBehaviour:
   destination: {x: 0, y: 0, z: 0}
   walkSpeed: 8
   rotationSpeed: 360
+--- !u!114 &114787651839279696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1225679991612958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40258fb2c99f9ad44b2b056fd225fb74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &135123612172012662
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639080026676076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!137 &137166361438225622
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1494,7 +1600,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1
-  m_Radius: 0.5
+  m_Radius: 0.61
   m_SlopeLimit: 20
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
