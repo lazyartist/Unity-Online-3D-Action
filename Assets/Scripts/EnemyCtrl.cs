@@ -49,16 +49,13 @@ public class EnemyCtrl : MonoBehaviour
         switch (state)
         {
             case State.Walking:
-                WalkStart();
+                Walking();
                 break;
             case State.Chasing:
-                ChaseStart();
+                Chasing();
                 break;
             case State.Attacking:
-                AttackStart();
-                break;
-            case State.Died:
-                Died();
+                Attacking();
                 break;
         }
 
