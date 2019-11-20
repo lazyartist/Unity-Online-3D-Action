@@ -20,7 +20,7 @@ public class EnemyCtrl : MonoBehaviour
     CharaAnimation charaAnimation;
     CharacterMove characterMove;
     Transform attackTarget;
-    
+
     //스테이트 종류
     enum State
     {
@@ -160,6 +160,7 @@ public class EnemyCtrl : MonoBehaviour
     //공격 중 처리
     void Attacking()
     {
+        //공격이 끝났다.
         if (charaAnimation.IsAttacked())
         {
             ChangeState(State.Walking);
@@ -207,7 +208,7 @@ public class EnemyCtrl : MonoBehaviour
     }
 
     //공격 대상을 설정한다
-    public void SetAttckTarget(Transform target)
+    public void SetAttackTarget(Transform target)
     {
         attackTarget = target;
     }
