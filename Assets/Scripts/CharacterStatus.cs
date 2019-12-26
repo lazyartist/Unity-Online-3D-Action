@@ -20,6 +20,8 @@ public class CharacterStatus : MonoBehaviour {
     public bool attacking = false;
     public bool died = false;
 
+    public CharacterStatusGui CharacterStatusGui;
+
     private void Update()
     {
         powerBoost = false;
@@ -27,6 +29,12 @@ public class CharacterStatus : MonoBehaviour {
         {
             powerBoost = true;
             powerBoostTime = Mathf.Max(powerBoostTime - Time.deltaTime, 0.0f);
+        }
+
+        if(CharacterStatusGui != null)
+        {
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+            CharacterStatusGui.GetComponent<RectTransform>().position = screenPosition;
         }
     }
 

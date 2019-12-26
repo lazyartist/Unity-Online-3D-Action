@@ -190,6 +190,7 @@ public class EnemyCtrl : MonoBehaviour
         status.died = true;
         DropItem();
         Destroy(gameObject);
+        Destroy(status.CharacterStatusGui.gameObject);
 
         if (gameObject.tag == "Boss")
         {
