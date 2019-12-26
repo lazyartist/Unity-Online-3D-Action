@@ -24,6 +24,11 @@ public class AttackArea : MonoBehaviour {
         AttackInfo attackInfo = new AttackInfo();
         //공격력 계산
         attackInfo.attackPower = status.Power;
+        //공격 강화 중.
+        if (status.powerBoost)
+        {
+            attackInfo.attackPower += attackInfo.attackPower;
+        }
         attackInfo.attacker = transform.root;//transform.root 계층에서 가장 위에 있는 Transform을 반환(절대 null을 반환하지 않음)
 
         return attackInfo;
