@@ -11,6 +11,7 @@ public class PlayerCtrl : MonoBehaviour
     Transform attackTarget;
     InputManager inputManager;
     public float attackRange = 1.5f;
+    GameRuleCtrl gameRuleCtrl;
 
     //스테이트의 종류
     enum State
@@ -28,6 +29,7 @@ public class PlayerCtrl : MonoBehaviour
         status = GetComponent<CharacterStatus>();
         charaAnimation = GetComponent<CharaAnimation>();
         inputManager = FindObjectOfType<InputManager>();
+        gameRuleCtrl = FindObjectOfType<GameRuleCtrl>();
     }
 
     void Update()
@@ -140,6 +142,7 @@ public class PlayerCtrl : MonoBehaviour
     private void Died()
     {
         status.died = true;
+        gameRuleCtrl.GameOver();
     }
 
     void Damage(AttackArea.AttackInfo attackInfo)

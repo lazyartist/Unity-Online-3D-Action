@@ -20,6 +20,7 @@ public class EnemyCtrl : MonoBehaviour
     CharaAnimation charaAnimation;
     CharacterMove characterMove;
     Transform attackTarget;
+    GameRuleCtrl gameRuleCtrl;
 
     //스테이트 종류
     enum State
@@ -38,6 +39,8 @@ public class EnemyCtrl : MonoBehaviour
         status = GetComponent<CharacterStatus>();
         charaAnimation = GetComponent<CharaAnimation>();
         characterMove = GetComponent<CharacterMove>();
+        gameRuleCtrl = FindObjectOfType<GameRuleCtrl>();
+
         //초기 위치를 저장한다
         basePosition = transform.position;
         //대기 시간
@@ -187,6 +190,11 @@ public class EnemyCtrl : MonoBehaviour
         status.died = true;
         DropItem();
         Destroy(gameObject);
+
+        if (gameObject.tag == "Boss")
+        {
+            gameRuleCtrl.GameClear();
+        }
     }
 
     void Damage(AttackArea.AttackInfo attackInfo)

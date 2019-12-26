@@ -21,7 +21,7 @@ public class AttackAreaActivator : MonoBehaviour {
 	
     void StartAttackHit()
     {
-        Debug.Log("StartAttackHit in AttackAreaActivator");
+        //Debug.Log("StartAttackHit in AttackAreaActivator");
         foreach (Collider item in attackAreaColliders)
         {
             item.enabled = true;
@@ -30,7 +30,7 @@ public class AttackAreaActivator : MonoBehaviour {
 
     void EndAttackHit()
     {
-        Debug.Log("StartAttackHit in AttackAreaActivator");
+        //Debug.Log("EndAttackHit in AttackAreaActivator");
         foreach (Collider item in attackAreaColliders)
         {
             item.enabled = false;
