@@ -15,6 +15,8 @@ public class EnemyCtrl : MonoBehaviour
     public Vector3 basePosition;
     //복수의 아이템을 저장할 수 있는 배열로 한다
     public GameObject[] dropItemPrefab;
+    //타격 이펙트
+    public GameObject hitEffect;
 
     CharacterStatus status;
     CharaAnimation charaAnimation;
@@ -200,6 +202,10 @@ public class EnemyCtrl : MonoBehaviour
 
     void Damage(AttackArea.AttackInfo attackInfo)
     {
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.transform.localPosition = transform.position + new Vector3(0.0f, 0.5f, 0.0f);
+        Destroy(effect, 0.3f);//0.3초 후 제거한다.
+
         status.HP -= attackInfo.attackPower;
         if (status.HP <= 0)
         {

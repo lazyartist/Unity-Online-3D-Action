@@ -7,11 +7,13 @@ public class GameResultGui : MonoBehaviour
 {
     public GameRuleCtrl GameRuleCtrl;
     public Texture GameClearTexture;
-    public Texture GameOverRawImage;
+    public Texture GameOverTexture;
     public RawImage GameResultRawImage;
 
     void Start()
     {
+        //GetComponent<RectTransform>().position = new Vector3(100.0f, 0.0f, 0.0f);
+        //gameObject.transform.position = new Vector3(100.0f, 0.0f, 0.0f);
         GameResultRawImage.enabled = false;
     }
 
@@ -25,7 +27,13 @@ public class GameResultGui : MonoBehaviour
         else if (GameRuleCtrl.gameOver)
         {
             GameResultRawImage.enabled = true;
-            GetComponent<RawImage>().texture = GameOverRawImage;
+            GetComponent<RawImage>().texture = GameOverTexture;
+        }
+
+        if (GameRuleCtrl.gameClear || GameRuleCtrl.gameOver)
+        {
+            GetComponent<RectTransform>().anchoredPosition = new Vector3(100.0f, 0.0f, 0.0f);
+            //GetComponent<RectTransform>().SetPositionAndRotation(new Vector3(100.0f, 0.0f, 0.0f), Quaternion.identity);
         }
     }
 }

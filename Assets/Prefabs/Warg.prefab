@@ -1297,6 +1297,9 @@ MonoBehaviour:
   characterName: Warg
   attacking: 0
   died: 0
+  CharacterStatusGuiPrefab: {fileID: 0}
+  CharacterStatusGui: {fileID: 0}
+  UICanvas: {fileID: 0}
 --- !u!114 &114087463502741198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1314,6 +1317,7 @@ MonoBehaviour:
   dropItemPrefab:
   - {fileID: 1448575420495638, guid: d50f013996f863947a30c9d9b95a1dff, type: 2}
   - {fileID: 1074957459811056, guid: 691bd0a01169bd9478d7395ac66f9087, type: 2}
+  hitEffect: {fileID: 1832047839199726, guid: 1905564f14db20b4eb9d570cd3388791, type: 2}
 --- !u!114 &114091447927822222
 MonoBehaviour:
   m_ObjectHideFlags: 1

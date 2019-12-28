@@ -38,10 +38,8 @@ public class EnemyGeneratorCtrl : MonoBehaviour {
                 //적 생성
                 var enemyGO = Instantiate(enemyPrefab, transform.position, transform.rotation) as GameObject;
                 existEnemy[enemyCount] = enemyGO;
-                var characterStatusGui = Canvas.Instantiate(CharacterStatusGuiPrefab);
-                characterStatusGui.transform.SetParent(UICanvas.transform);
-                characterStatusGui.CharacterStatus = enemyGO.GetComponent<CharacterStatus>();
-                characterStatusGui.CharacterStatus.CharacterStatusGui = characterStatusGui;
+                enemyGO.GetComponent<CharacterStatus>().UICanvas = UICanvas;
+                enemyGO.GetComponent<CharacterStatus>().CharacterStatusGuiPrefab = CharacterStatusGuiPrefab;
                 return;
             }
         }
