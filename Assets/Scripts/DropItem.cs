@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DropItem : MonoBehaviour {
+    public AudioClip itemSeClip;
     public enum ItemKind
     {
         Attack,
@@ -27,6 +28,8 @@ public class DropItem : MonoBehaviour {
             aStatus.GetItem(kind);
             //획득한 아잍템을 지운다.
             Destroy(gameObject);
+            //오디오 재생
+            AudioSource.PlayClipAtPoint(itemSeClip, transform.position);
         }
     }
 }

@@ -1403,6 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40258fb2c99f9ad44b2b056fd225fb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSeClip: {fileID: 8300000, guid: 905344e0fe935ff42a969bb749d52a74, type: 3}
 --- !u!114 &114052125906948894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1436,6 +1437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb04eda03d38574188eea535df2baa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSeClip: {fileID: 8300000, guid: 2d00d52cbe0f7c540a83a6ef0e413b95, type: 3}
 --- !u!114 &114309129416687194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1448,6 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 1832047839199726, guid: 1905564f14db20b4eb9d570cd3388791, type: 2}
+  deathSeClip: {fileID: 8300000, guid: b963961e468e3d64a80c591cc733bbe5, type: 3}
   attackRange: 1.5
 --- !u!114 &114854907259818544
 MonoBehaviour:

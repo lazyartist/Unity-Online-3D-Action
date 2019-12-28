@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackArea : MonoBehaviour {
+    public AudioClip hitSeClip;
+    AudioSource hitSeAudio;
     CharacterStatus status;
     new Collider collider;//new : 상속멤버 collider를 명시적으로 숨긴다.
 
     void Start () {
+        hitSeAudio = gameObject.AddComponent<AudioSource>();
+        hitSeAudio.clip = hitSeClip;
+        hitSeAudio.loop = false;
         status = transform.root.GetComponent<CharacterStatus>();
         collider = GetComponent<Collider>();
     }
@@ -41,6 +46,8 @@ public class AttackArea : MonoBehaviour {
         other.SendMessage("Damage", GetAttackInfo());
         //공격한 대상을 저장한다.
         status.lastAttackTarget = other.transform.root.gameObject;
+        //오디오 재생
+        hitSeAudio.Play();
     }
 
     //공격 판정을 유효로 한다.

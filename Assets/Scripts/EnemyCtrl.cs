@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EnemyCtrl : MonoBehaviour
 {
+    public AudioClip deathSeClip;
     //대기 시간은 2초로 설정한다
     public float waitBaseTime = 2.0f;
     //남은 대기 시간
@@ -189,6 +190,9 @@ public class EnemyCtrl : MonoBehaviour
 
     private void Died()
     {
+        //오디오 재생
+        AudioSource.PlayClipAtPoint(deathSeClip, transform.position);
+
         status.died = true;
         DropItem();
         Destroy(gameObject);

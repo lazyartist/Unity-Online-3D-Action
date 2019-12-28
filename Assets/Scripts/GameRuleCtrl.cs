@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameRuleCtrl : MonoBehaviour
 {
+    public AudioClip clearSeClip;
     //남은 시간
     public float timeRemaining = 5.0f;
     //게임 오버 플래그
@@ -13,6 +14,16 @@ public class GameRuleCtrl : MonoBehaviour
     public bool gameClear = false;
     //씬 이행 시간
     public float sceneChangeTime = 3.0f;
+
+    AudioSource clearSeAudio;
+
+    private void Start()
+    {
+        //오디오 초기화
+        clearSeAudio = gameObject.AddComponent<AudioSource>();
+        clearSeAudio.loop = false;
+        clearSeAudio.clip = clearSeClip;
+    }
 
     void Update()
     {
@@ -45,5 +56,7 @@ public class GameRuleCtrl : MonoBehaviour
     {
         gameClear = true;
         Debug.Log("GameClear");
+        //오디오 재생
+        clearSeAudio.Play();
     }
 }

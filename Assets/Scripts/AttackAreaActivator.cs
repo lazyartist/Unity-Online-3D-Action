@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackAreaActivator : MonoBehaviour {
+    public AudioClip attackSeClip;
     //공격 판정 컬라이더 배열
     Collider[] attackAreaColliders;
+    AudioSource attackSeAudio;
 
 	void Start () {
         //자식 오브젝트에서 AttackArea 스크립트가 추가된 오브젝트를 찾는다.
@@ -17,6 +19,10 @@ public class AttackAreaActivator : MonoBehaviour {
             //초기값은 false로 한다.
             attackAreaColliders[i].enabled = false;
         }
+        //오디오 초기화
+        attackSeAudio = gameObject.AddComponent<AudioSource>();
+        attackSeAudio.clip = attackSeClip;
+        attackSeAudio.loop = false;
     }
 	
     void StartAttackHit()
@@ -26,6 +32,7 @@ public class AttackAreaActivator : MonoBehaviour {
         {
             item.enabled = true;
         }
+        attackSeAudio.Play();
     }
 
     void EndAttackHit()

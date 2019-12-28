@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerCtrl : MonoBehaviour
 {
     public GameObject hitEffect;
+    public AudioClip deathSeClip;
     const float RayCastMaxDistance = 100.0f;
     CharacterStatus status;
     CharaAnimation charaAnimation;
@@ -14,6 +15,7 @@ public class PlayerCtrl : MonoBehaviour
     public float attackRange = 1.5f;
     GameRuleCtrl gameRuleCtrl;
     TargetCursor targetCursor;
+    AudioSource deathSeAudio;
 
     //스테이트의 종류
     enum State
@@ -34,6 +36,10 @@ public class PlayerCtrl : MonoBehaviour
         gameRuleCtrl = FindObjectOfType<GameRuleCtrl>();
         targetCursor = FindObjectOfType<TargetCursor>();
         targetCursor.SetPosition(transform.position);
+        //오디오 초기화
+        deathSeAudio = gameObject.AddComponent<AudioSource>();
+        deathSeAudio.clip = deathSeClip;
+        deathSeAudio.loop = false;
     }
 
     void Update()
@@ -150,6 +156,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         status.died = true;
         gameRuleCtrl.GameOver();
+        deathSeAudio.Play();
     }
 
     void Damage(AttackArea.AttackInfo attackInfo)

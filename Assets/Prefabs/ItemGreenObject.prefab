@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23826ae90d55b5e4fad99683a5df2206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemSeClip: {fileID: 8300000, guid: a1e3622087036d344a7baa5e07296f7a, type: 3}
   kind: 1
 --- !u!135 &135683915630267934
 SphereCollider:
